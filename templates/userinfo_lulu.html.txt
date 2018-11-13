@@ -1,0 +1,29 @@
+<!doctype html>
+<title>Plotting Closing Prices Using Flask and Bokeh</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
+<div class=page>
+  <h1>Plotting Closing Prices Using Flask and Bokeh</h1>
+  <div class=metanav>
+    <h4>
+      Enter a stock ticker
+    </h4>
+
+    <form id='userinfoform_lulu' method='post' action='/' >
+      <p>
+    Stock Ticker: <input type='text' name='name_lulu' />
+      </p>
+        
+       <select name="age_lulu">
+    <option value="07">July 2018</option>
+    <option value="08">August 2018</option>
+    <option value="09">September 2018</option>
+    <option value="10">October 2018</option>
+      </select>   
+        
+      <p>
+    <input type='submit' value='Submit' />
+      </p>
+    </form>
+
+  </div>
+</div>
