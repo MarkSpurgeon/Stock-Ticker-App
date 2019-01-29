@@ -66,7 +66,7 @@ np.all(np.isfinite(df_nocat))
 
 
 # pca calculation
-position import PCA
+from sklearn.decomposition import PCA
 from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
 #from sklearn import preprocessing
@@ -118,6 +118,20 @@ for target, color in zip(targets,colors):
               , alpha = 0.05)
 ax.legend(targets)
 ax.grid()
+
+
+
+# clustering
+from sklearn.cluster import KMeans
+
+# Number of clusters
+kmeans = KMeans(n_clusters=2)
+# Fitting the input data
+kmeans = kmeans.fit(X)
+# Getting the cluster labels
+labels = kmeans.predict(X)
+# Centroid values
+centroids = kmeans.cluster_centers_
 
 
 
