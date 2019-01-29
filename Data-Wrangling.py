@@ -51,6 +51,11 @@ from collections import Counter
 
 
 
+# joins
+pd.merge(df, df3, on='geolocation_zip_code_prefix', how='outer').head()
+
+
+
 # change inf to nan, calculate mean, impute missing values with mean
 for column in df_nocat.columns:
     df_nocat[column] = df_nocat[column].replace([np.inf, -np.inf], np.nan)
